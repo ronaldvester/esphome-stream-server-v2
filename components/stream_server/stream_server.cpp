@@ -287,7 +287,7 @@ void StreamServerComponent::dump_config() {
     std::string ip_str = "";
     for (auto &ip : network::get_ip_addresses()) {
       if (ip.is_set()) {
-        char buf[IP_ADDRESS_BUFFER_SIZE];
+        char buf[40];
         ip.str_to(buf);
         ip_str += " " + buf;
       }
